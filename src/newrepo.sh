@@ -11,24 +11,14 @@ newRepo () {
 
   # Copy & paste files
   echo "Copying & pasting files..."
-  cp -Tr ~/repo/new-repo/src/files ./
+  cp -rT ~/repo/new-repo/src/files ./
   echo "Files ready"
 
-  # Node start
+  # Node modules install
   echo "Installing node modules..."
-  npm set init.scripts.release "standard-version"
   npm init -y
-
-  # Commitlint
-  npm install --save-dev @commitlint/{config-conventional,cli}
-  echo "module.exports = { extends: ['@commitlint/config-conventional'] }" > commitlint.config.js
-
-  # Husky
-  npm install husky --save-dev
-
-  # Standard version
-  npm install standard-version --save-dev
-  npm config delete init.scripts.release
+  npm install --save-dev standard-version @commitlint/{config-conventional,cli} husky
+  node -e "let pkg=require('./package.json'); pkg.scripts.release='standard-version'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
   echo "Node modules ready"
 
   # Git start
@@ -37,6 +27,7 @@ newRepo () {
 
   ## Hooks
   npx husky install
+  echo "module.exports = { extends: ['@commitlint/config-conventional'] }" > commitlint.config.js
   npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
 
   git add -A
@@ -49,4 +40,4 @@ newRepo () {
   echo "New repo completed"
 }
 
-newRepo
+newRepo $1 $2
