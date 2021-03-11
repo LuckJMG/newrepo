@@ -1,6 +1,6 @@
 #!/bin/bash
 
-newRepo () {
+luck () {
   # Comprobate first argument
   if [ ! -z $1 ]
   then
@@ -34,7 +34,7 @@ newRepo () {
     npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
 
     git add -A
-    git commit -m "chore(repo): start"
+    git commit -m "build(repo): start"
     git branch -m master main
     git branch test
 
@@ -54,4 +54,4 @@ newRepo () {
   fi
 }
 
-newRepo $1 $2
+luck $1 $2
