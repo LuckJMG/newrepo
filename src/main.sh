@@ -1,14 +1,17 @@
 #!/bin/bash
 
-$config_dir = ~/repo/newrepo/src/config
+
 
 main () {
-  if (( $1 == "-d" ))
+  if [ -z $1 ] || [ -z $2 ]
   then
-    $config_dir/default.sh $2 $3
-  elif (( $1 == "-l" ))
+    echo "Missing parameters"
+  elif (( $1 == "-d" ))
   then
-    $config_dir/luck.sh $2 $3
+    ~/repo/newrepo/src/config/default.sh $2 $3
+  elif (( $1 == "-s" ))
+  then
+    ~/repo/newrepo/src/config/standard.sh $2 $3
   fi
 }
 

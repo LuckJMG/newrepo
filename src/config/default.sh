@@ -13,7 +13,7 @@ default () {
 
     # Copy & paste files
     echo "Copying & pasting files..."
-    cp -rT ~/repo/newrepo/src/files ./
+    cp -rT ~/repo/newrepo/src/files/default ./
     echo "Files ready"
 
     # Git start

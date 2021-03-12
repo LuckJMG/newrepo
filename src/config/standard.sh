@@ -14,7 +14,7 @@ luck () {
 
     # Copy & paste files
     echo "Copying & pasting files..."
-    cp -rT ~/repo/newrepo/src/files ./
+    cp -rT ~/repo/newrepo/src/files/standard ./
     echo "Files ready"
 
     # Node modules install
