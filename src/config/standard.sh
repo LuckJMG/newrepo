@@ -34,7 +34,7 @@ luck () {
     npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
 
     git add -A
-    git commit -m "build(repo): start"
+    git commit -m "chore(repo): start"
     git branch -m master main
     git branch test
 
