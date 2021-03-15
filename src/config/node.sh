@@ -1,6 +1,6 @@
 #!/bin/bash
 
-standard () {
+default () {
   # Comprobate first argument
   if [ ! -z $1 ]
   then
@@ -14,29 +14,18 @@ standard () {
 
     # Copy & paste files
     echo "Copying & pasting files..."
-    cp -rT ~/repo/newrepo/src/files/standard ./
+    cp -rT ~/repo/newrepo/src/files/default ./
     echo "Files ready"
 
-    # Node modules install
-    echo "Installing node modules..."
+    # Node start
     npm init -y
-    npm install --save-dev standard-version @commitlint/{config-conventional,cli} husky
-    node -e "let pkg=require('./package.json'); pkg.scripts.release='standard-version'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
-    echo "Node modules ready"
 
     # Git start
     echo "Starting git repo..."
     git init
-
-    ## Hooks
-    npx husky install
-    echo "module.exports = { extends: ['@commitlint/config-conventional'] }" > commitlint.config.js
-    npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
-
     git add -A
     git commit -m "chore(repo): start"
     git branch -m master main
-    git branch test
 
     ## Connect to remote repositorie
     if [ ! -z $2 ]
@@ -54,4 +43,4 @@ standard () {
   fi
 }
 
-standard $1 $2
+default $1 $2

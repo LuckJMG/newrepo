@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 main () {
   if [ -z $1 ] || [ -z $2 ]
   then
@@ -12,6 +10,9 @@ main () {
   elif [ $1 == "-s" ]
   then
     ~/repo/newrepo/src/config/standard.sh $2 $3
+  elif [ $1 == "-n" ]
+  then
+    ~/repo/newrepo/src/config/node.sh $2 $3
   elif [ $1 == "-m" ]
   then
     ~/repo/newrepo/src/config/minimalist.sh $2
