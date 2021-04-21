@@ -13,6 +13,9 @@ main () {
   elif [ $1 == "-n" ]
   then
     ~/repo/newrepo/src/config/node.sh $2 $3
+  elif [ $1 == "-w" ]
+  then
+    ~/repo/newrepo/src/config/web.sh $2 $3
   elif [ $1 == "-m" ]
   then
     ~/repo/newrepo/src/config/minimalist.sh $2
