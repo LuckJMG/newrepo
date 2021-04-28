@@ -1,6 +1,6 @@
 #!/bin/bash
 
-default () {
+node () {
   # Comprobate first argument
   if [ ! -z $1 ]
   then
@@ -43,4 +43,4 @@ default () {
   fi
 }
 
-default $1 $2
+node $1 $2

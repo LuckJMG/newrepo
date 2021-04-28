@@ -16,6 +16,9 @@ main () {
   elif [ $1 == "-w" ]
   then
     ~/repo/newrepo/src/config/web.sh $2 $3
+  elif [ $1 == "-p" ]
+  then
+    ~/repo/newrepo/src/config/python.sh $2 $3
   elif [ $1 == "-m" ]
   then
     ~/repo/newrepo/src/config/minimalist.sh $2

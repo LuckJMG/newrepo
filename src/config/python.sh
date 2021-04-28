@@ -1,6 +1,6 @@
 #!/bin/bash
 
-web () {
+python () {
   # Comprobate first argument
   if [ ! -z $1 ]
   then
@@ -8,12 +8,12 @@ web () {
     echo "Creating folders..."
     mkdir $1
     cd $1
-    mkdir css js img
+    mkdir src
     echo "Folders ready"
 
     # Copy & paste files
     echo "Copying & pasting files..."
-    cp -rT ~/repo/newrepo/src/files/web ./
+    cp -rT ~/repo/newrepo/src/files/python ./
     echo "Files ready"
 
     # Git start
@@ -39,4 +39,4 @@ web () {
   fi
 }
 
-web $1 $2
+python $1 $2
