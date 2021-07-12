@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 python () {
   # Comprobate first argument
-  if [ ! -z $1 ]
+  if [ -n "$1" ]
   then
     # Create folders
     echo "Creating folders..."
-    mkdir $1
-    cd $1
+    mkdir "$1"
+    cd "$1" || exit
     mkdir src
     echo "Folders ready"
 
@@ -20,13 +20,13 @@ python () {
     echo "Starting git repo..."
     git init
     git add -A
-    git commit -m "chore(repo): start"
+    git commit -m "build(repo): start"
     git branch -m master main
 
     ## Connect to remote repositorie
-    if [ ! -z $2 ]
+    if [ -n "$2" ]
     then
-      git remote add origin $2
+      git remote add origin "$2"
       git push origin main
     fi
 
@@ -39,4 +39,4 @@ python () {
   fi
 }
 
-python $1 $2
+python "$1" "$2"

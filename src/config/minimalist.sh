@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 minimalist () {
   # Comprobate first argument
-  if [ ! -z $1 ]
+  if [ -n "$1" ]
   then
     # Create folders
     echo "Creating folders..."
-    mkdir $1
-    cd $1
+    mkdir "$1"
+    cd "$1" || exit
     mkdir src
     echo "Folders ready"
 
@@ -20,7 +20,7 @@ minimalist () {
     echo "Starting git repo..."
     git init
     git add -A
-    git commit -m "chore(repo): start"
+    git commit -m "build(repo): start"
     git branch -m master main
     echo "Git ready"
 
@@ -31,4 +31,4 @@ minimalist () {
   fi
 }
 
-minimalist $1
+minimalist "$1"

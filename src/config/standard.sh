@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 standard () {
   # Comprobate first argument
-  if [ ! -z $1 ]
+  if [ -n "$1" ]
   then
     # Create folders
     echo "Creating folders..."
-    mkdir $1
-    cd $1
+    mkdir "$1"
+    cd "$1" || exit
     mkdir src
     mkdir node_modules
     echo "Folders ready"
@@ -34,14 +34,14 @@ standard () {
     npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
 
     git add -A
-    git commit -m "chore(repo): start"
+    git commit -m "build(repo): start"
     git branch -m master main
     git branch test
 
     ## Connect to remote repositorie
-    if [ ! -z $2 ]
+    if [ -n "$2" ]
     then
-      git remote add origin $2
+      git remote add origin "$2"
       git push origin main
     fi
 
@@ -54,4 +54,4 @@ standard () {
   fi
 }
 
-standard $1 $2
+standard "$1" "$2"
