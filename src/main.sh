@@ -1,37 +1,32 @@
 #!/usr/bin/env bash
 
-config_path="$(dirname "$0")/config"  # Current dir
+CONFIG_PATH="$(dirname "$0")/config"  # Current dir
 
 main () {
-  # Required parameters comprobation
-  if [ -z "$1" ] || [ -z "$2" ]
-  then
+  if [ -n "$1" ]; then
+    # Command options
+    case "$1" in
+      "-st")
+        "$CONFIG_PATH"/standard.sh "$2" "$3"
+      ;;
+      "-nd")
+        "$CONFIG_PATH"/node.sh "$2" "$3"
+      ;;
+      "-wb")
+        "$CONFIG_PATH"/web.sh "$2" "$3"
+      ;;
+      "-py")
+        "$CONFIG_PATH"/python.sh "$2" "$3"
+      ;;
+      "-ml")
+        "$CONFIG_PATH"/minimalist.sh "$2" "$3"
+      ;;
+      *)
+        "$CONFIG_PATH"/default.sh "$1" "$2"
+      ;;
+    esac
+  else
     echo "Missing parameters"
-
-  # newrepo options
-  elif [ "$1" == "-d" ]
-  then
-    "$config_path"/default.sh "$2" "$3"
-
-  elif [ "$1" == "-s" ]
-  then
-    "$config_path"/standard.sh "$2" "$3"
-
-  elif [ "$1" == "-n" ]
-  then
-    "$config_path"/node.sh "$2" "$3"
-
-  elif [ "$1" == "-w" ]
-  then
-    "$config_path"/web.sh "$2" "$3"
-
-  elif [ "$1" == "-p" ]
-  then
-    "$config_path"/python.sh "$2" "$3"
-
-  elif [ "$1" == "-m" ]
-  then
-    "$config_path"/minimalist.sh "$2"
   fi
 }
 
