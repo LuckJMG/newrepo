@@ -13,6 +13,8 @@ web () {
 
     # Copy & paste files
     echo "Copying & pasting files..."
+    cp -rT ~/repo/newrepo/src/files/minimalist ./
+    cp -rT ~/repo/newrepo/src/files/default ./
     cp -rT ~/repo/newrepo/src/files/web ./
     echo "Files ready"
 

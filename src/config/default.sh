@@ -10,6 +10,7 @@ default () {
 
   # Copy & paste files
   echo "Copying & pasting files..."
+  cp -rT ~/repo/newrepo/src/files/minimalist ./
   cp -rT ~/repo/newrepo/src/files/default ./
   echo "Files ready"
 

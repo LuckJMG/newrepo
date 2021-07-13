@@ -1,6 +1,6 @@
 root = true
 
-[*]
+[*.{html,css,js}]
 charset                   = utf-8
 end_of_line               = LF
 indent_style              = space

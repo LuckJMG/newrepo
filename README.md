@@ -77,6 +77,8 @@ Also, if you before created a github repository, you can link the local repo to 
 newrepo name url
 ```
 
+The only thing you should change is in the license, the username to your name, in the `LICENSE` file and at the end of the `README.md` file.
+
 ## Thanks
 
 I want to thank everyone who has come this far, this is another of my little projects as a 17-year-old student to practice, make my work more efficient and help the community, really thank you very much just for reading this.
