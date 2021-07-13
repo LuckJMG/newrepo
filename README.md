@@ -31,19 +31,13 @@ To install the module in your favorite shell, you first need to clone this repos
 git clone https://github.com/LuckJMG/newrepo
 ```
 
-Enter the repository to give the executable permit to `install.sh` and execute it:
-
-``` shell
-chmod +x install.sh
-```
-
 Then in your shell config file you need to put this alias:
 
 ``` shell
-alias newrepo="$dir_newrepo/src/newrepo.sh"
+alias newrepo="$DIR_NEWREPO/src/newrepo.sh"
 ```
 
-Replace `$dir_newrepo` with the direction of the cloned repository.
+Replace `$DIR_NEWREPO` with the direction of the cloned repository.
 
 ## Usage
 
@@ -91,7 +85,7 @@ You can ask question of the project posting an issue in [issue tab](https://gith
 
 PRs for recommendations or optimizations for this project.
 
-Read the [CONTRIBUTING](CONTRIBUTING.md) and the [CODE OF CONDUCT](CODE_OF_CONDUCT.md)to view how to contribute to the project in the best way for the community.
+Read the [CONTRIBUTING](CONTRIBUTING.md) and the [CODE OF CONDUCT](CODE_OF_CONDUCT.md) to view how to contribute to the project in the best way for the community.
 
 ## License
 
