@@ -10,7 +10,7 @@
   },
   "name": "new-repo",
   "description": "**Status:** Required.",
-  "version": null,
+  "version": "1.4.1",
   "main": "commitlint.config.js",
   "dependencies": {
     "add-stream": "^1.0.0",
