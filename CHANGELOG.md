@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/LuckJMG/New-Repo/compare/v1.3.0...v1.4.0) (2021-07-13)
+
+
+### Features
+
+* **main:** set default with no type parameter ([c99235f](https://github.com/LuckJMG/New-Repo/commit/c99235ff841d7d14fe003c6a504af10310324db3))
+
 ## [1.3.0](https://github.com/LuckJMG/New-Repo/compare/v1.2.0...v1.3.0) (2021-07-12)
 
 
