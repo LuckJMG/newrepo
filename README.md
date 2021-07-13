@@ -49,40 +49,39 @@ Replace `$dir_newrepo` with the direction of the cloned repository.
 
 Once installed you can create repositories more easily.
 
-The newrepo command is formed by 3 essential parts: the call of the command, the type of repository, the name of repository, and 1 optional: the connection to a remote repository.
+The newrepo command is formed by 4  parts: the call of the command, the type of repository, the name of repository and the connection to a remote repository.
 
 ``` shell
-newrepo -type name remote
+newrepo -type name url
 ```
 
 The most basic command is:
 
 ``` shell
-newrepo -d name
+newrepo name
 ```
 
-The type `-d` is the default type with all the basics without extras, there are several options that are mentioned in this table:
+This command will create a repo with all the basic files and folders without extras, but there are several other options that are mentioned in this table:
 
 | Type | Description | Contents |
 | ---- | ----------- | -------- |
-| `-d` | Default: Basic files without any extras. | Default files |
-| `-s` | Standard: Repository standardization | Conventional Commits, Standard README and Conventional Changelog  |
-| `-n` | Node: Repository made for coding with node. | npm init -y |
-| `-w`| Web: Repository made for web development. | index file, css folder, js folder and img folder |
-| `-p` | Python: Repository for python development. | setup file, sample folder with init and core files, and test folder |
-| `-m` | Minimalist: Only essential files. | .md files and license |
+| `-st` | Standard: Repository standardization | [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), [Standard README](https://github.com/RichardLitt/standard-readme) and [Standard Version](https://github.com/conventional-changelog/standard-version)  |
+| `-nd` | Node: Repository made for coding with node. | npm init -y |
+| `-wb`| Web: Repository made for web development. | index file, css folder, js folder and img folder |
+| `-py` | Python: Repository for python development. | setup file, sample folder with init and core files, and test folder |
+| `-ml` | Minimalist: Only essential files. | .md files and license |
 
 Also, if you before created a github repository, you can link the local repo to the remote repo in the same command that creates the local repo:
 
 ``` shell
-newrepo -d name url
+newrepo name url
 ```
 
 ## Thanks
 
 I want to thank everyone who has come this far, this is another of my little projects as a 17-year-old student to practice, make my work more efficient and help the community, really thank you very much just for reading this.
 
-A kiss <3.
+A kiss <3
 
 ## Contributing
 
