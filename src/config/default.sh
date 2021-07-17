@@ -1,35 +1,31 @@
 #!/usr/bin/env bash
 
-default () {
-  # Create folders
-  echo "Creating folders..."
-  mkdir "$1"
-  cd "$1" || exit
-  mkdir src
-  echo "Folders ready"
+# Create folders
+echo "Creating folders..."
+mkdir "$1"
+cd "$1" || exit
+mkdir src
+echo "Folders ready"
 
-  # Copy & paste files
-  echo "Copying & pasting files..."
-  cp -rT ~/repo/newrepo/src/files/minimalist ./
-  cp -rT ~/repo/newrepo/src/files/default ./
-  echo "Files ready"
+# Copy & paste files
+echo "Copying & pasting files..."
+cp -rT ~/repo/newrepo/src/files/minimalist ./
+cp -rT ~/repo/newrepo/src/files/default ./
+echo "Files ready"
 
-  # Git start
-  echo "Starting git repo..."
-  git init
-  git add -A
-  git commit -m "build(repo): start"
-  git branch -m master main
+# Git start
+echo "Starting git repo..."
+git init
+git add -A
+git commit -m "build(repo): start"
+git branch -m master main
 
-  ## Connect to remote repositorie
-  if [ -n "$2" ]
-  then
-    git remote add origin "$2"
-    git push origin main
-  fi
+## Connect to remote repositorie
+if [ -n "$2" ]
+then
+  git remote add origin "$2"
+  git push origin main
+fi
 
-  echo "Git ready"
-  echo "New repo completed"
-}
-
-default "$1" "$2"
+echo "Git ready"
+echo "New repo completed"
