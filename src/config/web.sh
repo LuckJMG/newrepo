@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Comprobate first argument
-if [ -n "$1" ]
-then
+if [ -n "$1" ]; then
   # Create folders
   echo "Creating folders..."
   mkdir "$1"
@@ -25,8 +24,7 @@ then
   git branch -m master main
 
   ## Connect to remote repositorie
-  if [ -n "$2" ]
-  then
+  if [ -n "$2" ]; then
     git remote add origin "$2"
     git push origin main
   fi

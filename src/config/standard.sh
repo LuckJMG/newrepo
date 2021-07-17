@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Comprobate first argument
-if [ -n "$1" ]
-then
+if [ -n "$1" ]; then
   # Create folders
   echo "Creating folders..."
   mkdir "$1"
@@ -31,7 +30,7 @@ then
 
   ## Hooks
   npx husky install
-  echo "module.exports = { extends: ['@commitlint/config-conventional'] }" > commitlint.config.js
+  echo "module.exports = { extends: ['@commitlint/config-conventional'] }" >commitlint.config.js
   npx husky add .husky/commit-msg "npx --no-install commitlint --edit \$1"
 
   git add -A
@@ -40,8 +39,7 @@ then
   git branch test
 
   ## Connect to remote repositorie
-  if [ -n "$2" ]
-  then
+  if [ -n "$2" ]; then
     git remote add origin "$2"
     git push origin main
   fi

@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # Comprobate first argument
-if [ -n "$1" ]
-then
+if [ -n "$1" ]; then
   # Create folders
   echo "Creating folders..."
   mkdir "$1"
