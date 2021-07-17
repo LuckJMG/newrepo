@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CURRENT_PATH=$(dirname "$(dirname "$0")")
+
 # Create folders
 echo "Creating folders..."
 mkdir "$1"
@@ -9,8 +11,8 @@ echo "Folders ready"
 
 # Copy & paste files
 echo "Copying & pasting files..."
-cp -rT ~/repo/newrepo/src/files/minimalist ./
-cp -rT ~/repo/newrepo/src/files/default ./
+cp -rT "$CURRENT_PATH"/files/minimalist ./
+cp -rT "$CURRENT_PATH"/files/default ./
 echo "Files ready"
 
 # Git start

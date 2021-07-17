@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+CURRENT_PATH=$(dirname "$(dirname "$0")")
+
 # Comprobate first argument
 if [ -n "$1" ]; then
   # Create folders
@@ -12,9 +14,9 @@ if [ -n "$1" ]; then
 
   # Copy & paste files
   echo "Copying & pasting files..."
-  cp -rT ~/repo/newrepo/src/files/minimalist ./
-  cp -rT ~/repo/newrepo/src/files/default ./
-  cp -rT ~/repo/newrepo/src/files/standard ./
+  cp -rT "$CURRENT_PATH"/files/minimalist ./
+  cp -rT "$CURRENT_PATH"/files/default ./
+  cp -rT "$CURRENT_PATH"/files/standard ./
   echo "Files ready"
 
   # Node modules install
