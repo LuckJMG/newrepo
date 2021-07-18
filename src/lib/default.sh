@@ -11,8 +11,8 @@ echo "Folders ready"
 
 # Create files
 echo "Creating files..."
-cp -rT "$CURRENT_PATH"/files/minimalist ./
-cp -rT "$CURRENT_PATH"/files/default ./
+cp -rT "$CURRENT_PATH"/lib/minimalist ./
+cp -rT "$CURRENT_PATH"/lib/default ./
 touch .gitignore
 echo "Files ready"
 

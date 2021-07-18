@@ -14,8 +14,8 @@ if [ -n "$1" ]; then
 
   # Copy & paste files
   echo "Copying & pasting files..."
-  cp -rT "$CURRENT_PATH"/files/minimalist ./
-  cp -rT "$CURRENT_PATH"/files/default ./
+  cp -rT "$CURRENT_PATH"/lib/minimalist ./
+  cp -rT "$CURRENT_PATH"/lib/default ./
   echo "Files ready"
 
   # Node start

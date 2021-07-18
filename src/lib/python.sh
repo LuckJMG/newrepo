@@ -11,9 +11,11 @@ if [ -n "$1" ]; then
   mkdir src
   echo "Folders ready"
 
-  # Create files
-  echo "Creating files..."
-  cp -rT "$CURRENT_PATH"/files/minimalist ./
+  # Copy & paste files
+  echo "Copying & pasting files..."
+  cp -rT "$CURRENT_PATH"/lib/minimalist ./
+  cp -rT "$CURRENT_PATH"/lib/default ./
+  cp -rT "$CURRENT_PATH"/lib/python ./
   echo "Files ready"
 
   # Git start
@@ -22,10 +24,17 @@ if [ -n "$1" ]; then
   git add -A
   git commit -m "build(repo): start"
   git branch -m master main
-  echo "Git ready"
 
+  ## Connect to remote repositorie
+  if [ -n "$2" ]; then
+    git remote add origin "$2"
+    git push origin main
+  fi
+
+  echo "Git ready"
   echo "New repo completed"
 
 else
   echo "Project name required"
+
 fi

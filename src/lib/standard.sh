@@ -14,9 +14,9 @@ if [ -n "$1" ]; then
 
   # Copy & paste files
   echo "Copying & pasting files..."
-  cp -rT "$CURRENT_PATH"/files/minimalist ./
-  cp -rT "$CURRENT_PATH"/files/default ./
-  cp -rT "$CURRENT_PATH"/files/standard ./
+  cp -rT "$CURRENT_PATH"/lib/minimalist ./
+  cp -rT "$CURRENT_PATH"/lib/default ./
+  cp -rT "$CURRENT_PATH"/lib/standard ./
   echo "Files ready"
 
   # Node modules install
