@@ -16,6 +16,7 @@ if [ -n "$1" ]; then
   echo "Copying & pasting files..."
   cp -rT "$CURRENT_PATH"/lib/minimalist ./
   cp -rT "$CURRENT_PATH"/lib/default ./
+  cp -rT "$CURRENT_PATH"/lib/node ./
   echo "Files ready"
 
   # Node start
