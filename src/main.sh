@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
 
-ASSETS_PATH="$(dirname "$0")/assets" # Current dir
+LIB_PATH="$(dirname "$0")/lib" # Current dir
 
 if [ -n "$1" ]; then
   # Command options
   case "$1" in
   "-st")
-    "$ASSETS_PATH"/standard.sh "$2" "$3"
+    "$LIB_PATH"/standard.sh "$2" "$3"
     ;;
   "-nd")
-    "$ASSETS_PATH"/node.sh "$2" "$3"
+    "$LIB_PATH"/node.sh "$2" "$3"
     ;;
   "-wb")
-    "$ASSETS_PATH"/web.sh "$2" "$3"
+    "$LIB_PATH"/web.sh "$2" "$3"
     ;;
   "-py")
-    "$ASSETS_PATH"/python.sh "$2" "$3"
+    "$LIB_PATH"/python.sh "$2" "$3"
     ;;
   "-ml")
-    "$ASSETS_PATH"/minimalist.sh "$2" "$3"
+    "$LIB_PATH"/minimalist.sh "$2" "$3"
     ;;
   *)
-    "$ASSETS_PATH"/default.sh "$1" "$2"
+    "$LIB_PATH"/default.sh "$1" "$2"
     ;;
   esac
 else
