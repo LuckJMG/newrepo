@@ -9,10 +9,11 @@ cd "$1" || exit
 mkdir src
 echo "Folders ready"
 
-# Copy & paste files
-echo "Copying & pasting files..."
+# Create files
+echo "Creating files..."
 cp -rT "$CURRENT_PATH"/files/minimalist ./
 cp -rT "$CURRENT_PATH"/files/default ./
+touch .gitignore
 echo "Files ready"
 
 # Git start

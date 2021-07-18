@@ -11,8 +11,8 @@ if [ -n "$1" ]; then
   mkdir src
   echo "Folders ready"
 
-  # Copy & paste files
-  echo "Copying & pasting files..."
+  # Create files
+  echo "Creating files..."
   cp -rT "$CURRENT_PATH"/files/minimalist ./
   echo "Files ready"
 
