@@ -31,10 +31,14 @@ To install the module in your favorite shell, you first need to clone this repos
 git clone https://github.com/LuckJMG/newrepo
 ```
 
-Then in your shell config file you need to put this alias:
+Then execute this command to put this alias in your shell config file:
 
 ``` shell
-alias newrepo="$DIR_NEWREPO/src/newrepo.sh"
+# If using bash
+echo 'alias newrepo="$DIR_NEWREPO/src/main.sh" >> ~/.bashrc'
+
+# If using zsh
+echo 'alias newrepo="$DIR_NEWREPO/src/main.sh" >> ~/.zshrc'
 ```
 
 Replace `$DIR_NEWREPO` with the direction of the cloned repository.
