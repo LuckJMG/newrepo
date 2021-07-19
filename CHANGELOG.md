@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/LuckJMG/New-Repo/compare/v1.4.1...v1.5.0) (2021-07-19)
+
+
+### Features
+
+* **node:** add gitignore file to node config ([c85ae28](https://github.com/LuckJMG/New-Repo/commit/c85ae2849dd97ce80d946e4884785988014f8572))
+* **style:** add editorconfig and gitignore file ([c1e68a4](https://github.com/LuckJMG/New-Repo/commit/c1e68a4962299c1f9d4f290b914d16d4d550f2b2))
+
+
+### Bug Fixes
+
+* **main:** lib path ([de1f535](https://github.com/LuckJMG/New-Repo/commit/de1f535cb9052346e561d36f58673c2b16ab9de6))
+* **path:** fix wrong path in config files ([b488c32](https://github.com/LuckJMG/New-Repo/commit/b488c32e67e38c8bf0fa88ee0ea8afa92f1f4a31))
+
 ### [1.4.1](https://github.com/LuckJMG/New-Repo/compare/v1.4.0...v1.4.1) (2021-07-13)
 
 ## [1.4.0](https://github.com/LuckJMG/New-Repo/compare/v1.3.0...v1.4.0) (2021-07-13)
