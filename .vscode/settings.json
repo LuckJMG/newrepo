@@ -2,5 +2,6 @@
     "cSpell.ignoreWords": [
         "wagoid"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.enabled": true
 }

@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 
+# Declare current path
 CURRENT_PATH=$(dirname "$(dirname "$0")")
 
-# Comprobate first argument
+# Check first argument
 if [ -n "$1" ]; then
   # Create folders
   echo "Creating folders..."
   mkdir "$1"
   cd "$1" || exit
   mkdir src
-  echo "Folders ready"
+  echo "Folders created"
 
-  # Create files
-  echo "Creating files..."
-  cp -rT "$CURRENT_PATH"/lib/minimalist ./
-  echo "Files ready"
+  # Export files
+  echo "Exporting files..."
+  cp -rT "$CURRENT_PATH"/assets/minimalist ./
+  echo "Files exported"
 
-  # Git start
-  echo "Starting git repo..."
+  # Start git
+  echo "Starting git..."
   git init
   git add -A
-  git commit -m "build(repo): start"
+  git commit -m "build(repo): start" # First commit
   git branch -m master main
-  echo "Git ready"
+  echo "Git started"
 
-  echo "New repo completed"
-
+  echo "New repository completed"
 else
-  echo "Project name required"
+  echo "Repository name required"
 fi

@@ -1,33 +1,34 @@
 #!/usr/bin/env bash
 
+# Declare current path
 CURRENT_PATH=$(dirname "$(dirname "$0")")
 
 # Create folders
 echo "Creating folders..."
-mkdir "$1"
+mkdir "$1" # Root folder
 cd "$1" || exit
-mkdir src
-echo "Folders ready"
+mkdir src # Source folder
+echo "Folders created"
 
-# Create files
-echo "Creating files..."
-cp -rT "$CURRENT_PATH"/lib/minimalist ./
-cp -rT "$CURRENT_PATH"/lib/default ./
+# Export files
+echo "Exporting files..."
+cp -rT "$CURRENT_PATH"/assets/minimalist ./
+cp -rT "$CURRENT_PATH"/assets/default ./
 touch .gitignore
-echo "Files ready"
+echo "Files exported"
 
-# Git start
-echo "Starting git repo..."
+# Start git
+echo "Starting git..."
 git init
 git add -A
-git commit -m "build(repo): start"
+git commit -m "build(repo): start" # First commit
 git branch -m master main
 
-## Connect to remote repositorie
+## Connect remote repository
 if [ -n "$2" ]; then
   git remote add origin "$2"
   git push origin main
 fi
 
-echo "Git ready"
-echo "New repo completed"
+echo "Git started"
+echo "New repository completed"
