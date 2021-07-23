@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/LuckJMG/newrepo/compare/v1.5.0...v1.6.0) (2021-07-23)
+
+
+### Bug Fixes
+
+* general fixes ([fa9e42b](https://github.com/LuckJMG/newrepo/commit/fa9e42bfe60b1577ccf3f5e8e26e4ae30fd472c4))
+
 ## [1.5.0](https://github.com/LuckJMG/New-Repo/compare/v1.4.1...v1.5.0) (2021-07-19)
 
 
