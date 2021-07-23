@@ -15,12 +15,12 @@ Description, please read [Standard Readme](https://github.com/RichardLitt/standa
 
 ## Install
 
-```
+``` language
 ```
 
 ## Usage
 
-```
+``` language
 ```
 
 Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.

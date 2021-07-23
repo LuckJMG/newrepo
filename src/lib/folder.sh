@@ -22,7 +22,7 @@ if [ "$1" == "-nd" ] || [ "$1" == "-st" ]; then
   mkdir node_modules
 elif [ "$1" == "-wb" ]; then
   # Web folders for web configuration
-  mkdir css js img
+  mkdir src/css src/js src/img
 fi
 
 echo "Folders created"

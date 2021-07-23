@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-#* New repository initialization
+#* New repository creation
 # Declare current lib path
 LIB_PATH="$(dirname "$0")/lib"
 
-echo "Starting new repository..."
+echo "Creating new repository..."
 
 # Check if first parameter is missing
 if [ -n "$1" ]; then
@@ -20,12 +20,12 @@ if [ -n "$1" ]; then
   #* Git initialization always at last
   "$LIB_PATH"/git.sh "$1" "$2" "$3"
 
-  echo "New repository started"
+  echo "New repository created"
 else # If first parameter is missing
-  echo "New repository starting failed"
+  echo "New repository creation failed"
   echo "Missing first parameter"
   #TODO: Make code errors for missing name and option
   #TODO: Log feature here
 fi
 
-#TODO: Create a test
+#TODO: Create an automated test
