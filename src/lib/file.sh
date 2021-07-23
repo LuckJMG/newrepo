@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
 
+#* Import files
 # Declare current path
 CURRENT_PATH=$(dirname "$(dirname "$0")")
 
-# Export files
-echo "Exporting files..."
+echo "Importing files..."
 
+# Check if is default configuration
 if [[ "$1" = -* ]]; then
   cd "$2" || exit
 else
   cd "$1" || exit
 fi
 
-# Minimalist
+# Base files
 cp -rT "$CURRENT_PATH"/assets/minimalist ./
 
-# Check if not minimalist
+# Check other configurations
 if [ "$1" != "-ml" ]; then
-  # Default
+  # More base files
   cp -rT "$CURRENT_PATH"/assets/default ./
 
   case "$1" in
@@ -40,4 +41,4 @@ if [ "$1" != "-ml" ]; then
   esac
 fi
 
-echo "Files exported"
+echo "Files imported"
