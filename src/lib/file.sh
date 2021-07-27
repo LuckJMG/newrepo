@@ -17,21 +17,21 @@ fi
 cp -rT "$CURRENT_PATH"/assets/minimalist ./
 
 # Check other configurations
-if [ "$1" != "-ml" ]; then
+if [ "$1" != "--minimalist" ]; then
   # More base files
   cp -rT "$CURRENT_PATH"/assets/default ./
 
   case "$1" in
-  "-st") # Standard
+  "--standard") # Standard
     cp -rT "$CURRENT_PATH"/assets/standard ./
     ;;
-  "-nd") # Node
+  "--node") # Node
     cp -rT "$CURRENT_PATH"/assets/node ./
     ;;
-  "-wb") # Web
+  "--web") # Web
     cp -rT "$CURRENT_PATH"/assets/web ./
     ;;
-  "-py") # Python
+  "--python") # Python
     cp -rT "$CURRENT_PATH"/assets/python ./
     touch setup.py src/sample/__init__.py src/sample/core.py src/tests/test_core.py
     ;;

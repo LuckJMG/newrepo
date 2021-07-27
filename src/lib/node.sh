@@ -13,7 +13,7 @@ fi
 # Node basic configuration
 npm init -y
 
-if [ "$1" == "-st" ]; then
+if [ "$1" == "--standard" ]; then
   ## If is standard configuration install required packages
   npm install --save-dev standard-version @commitlint/{config-conventional,cli} husky
   ## Add standard-version script to package.json

@@ -3,25 +3,21 @@
 #* Create folders
 echo "Creating folders..."
 
-# Check if is default configuration
+# Check default option
 if [[ "$1" = -* ]]; then
-  # If is any other configuration
+  # If any other option
   mkdir "$2"
   cd "$2" || exit
-else # If is default configuration
+else # If default option
   mkdir "$1"
   cd "$1" || exit
 fi
 
-#Basic source folder for any option
+# Basic source folder for any option
 mkdir src
 
-# Check if is required other folders
-if [ "$1" == "-nd" ] || [ "$1" == "-st" ]; then
-  # Node folder for node and standard configuration
-  mkdir node_modules
-elif [ "$1" == "-wb" ]; then
-  # Web folders for web configuration
+# Web folders for web option
+if [ "$1" == "--web" ]; then
   mkdir src/css src/js src/img
 fi
 
