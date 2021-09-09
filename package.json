@@ -1,6 +1,6 @@
 {
   "name": "newrepo",
-  "version": "1.7.0",
+  "version": null,
   "description": "Shell module to create repositories more easily and fast, with configurations for diverse cases.",
   "main": "src/main.sh",
   "devDependencies": {
