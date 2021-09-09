@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Import logs
+source "$(dirname "$0")"/log.sh
+
 #* New repository creation
 # Declare constants
 LIB_PATH="$(dirname "$0")/lib"
@@ -23,6 +26,10 @@ function newrepo() {
   echo "New repository created"
 }
 
+new_log
+log_info "Start"
+log_info "Parameters: $1 $2 $3"
+
 # Check first parameter
 if [ -n "$1" ]; then
 
@@ -40,26 +47,28 @@ if [ -n "$1" ]; then
 
       # If exist check second parameter
       if [ -n "$2" ]; then
+        log_info "Executing $1"
         newrepo "$1" "$2" "$3"
 
       else # If second parameter is missing
         echo "ERROR[1.0.2]: MISSING_PARAMETER"
         echo "The second parameter is missing"
+        log_error "[1.0.2]: MISSING_PARAMETER"
       fi
 
     else # If the option not exist
       echo "ERROR[2.0.1]: WRONG_OPTION"
       echo "The option $1 doesn't exist"
+      log_error "[2.0.1]: WRONG_OPTION"
     fi
 
   else # If not an option execute default
+    log_info "Executing default"
     newrepo "$1" "$2"
   fi
 
 else # If first parameter is missing
   echo "ERROR[1.0.1]: MISSING_PARAMETER"
   echo "The first parameter is missing"
-  #TODO: Log feature here
+  log_error "[1.0.1]: MISSING_PARAMETER"
 fi
-
-#TODO: Create an automated test
