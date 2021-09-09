@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/LuckJMG/newrepo/compare/v1.6.0...v1.7.0) (2021-09-09)
+
+
+### Features
+
+* **debug:** add error codes ([ff7b353](https://github.com/LuckJMG/newrepo/commit/ff7b35394875ada9a7670f41efb3f0b51d82d03f))
+* **log:** add log feature ([7bd5bc5](https://github.com/LuckJMG/newrepo/commit/7bd5bc552ef83415fb76bdb878ef3e26bc9ddc8b))
+
+
+### Bug Fixes
+
+* **node:** delete dependecies in package.json and package-lock.json ([d24ce56](https://github.com/LuckJMG/newrepo/commit/d24ce56d2ce3d3c77b9ba562fe0e507c8908b84a))
+* **standard:** reorganize stickers in README ([448a0ff](https://github.com/LuckJMG/newrepo/commit/448a0ff4dc25a167f04db8453d41c41943ba8c3c))
+
 ## [1.6.0](https://github.com/LuckJMG/newrepo/compare/v1.5.0...v1.6.0) (2021-07-23)
 
 
