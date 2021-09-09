@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/LuckJMG/newrepo/compare/v1.7.0...v1.7.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* **readme:** change options name in readme ([55b879a](https://github.com/LuckJMG/newrepo/commit/55b879ab9d7b4de9e6d14edf2ad1d79548e8c7a5))
+* **version:** delete vnull version ([8f01a27](https://github.com/LuckJMG/newrepo/commit/8f01a27172adce78f78c17b38c8930ce44765a32))
 
 ## [1.7.0](https://github.com/LuckJMG/newrepo/compare/v1.6.0...v1.7.0) (2021-09-09)
 
