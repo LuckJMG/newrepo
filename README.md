@@ -63,11 +63,11 @@ This command will create a repo with all the basic files and folders without ext
 
 | Type | Description | Contents |
 | ---- | ----------- | -------- |
-| `-st` | Standard: Repository standardization | [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), [Standard README](https://github.com/RichardLitt/standard-readme) and [Standard Version](https://github.com/conventional-changelog/standard-version)  |
-| `-nd` | Node: Repository made for coding with node. | npm init -y |
-| `-wb`| Web: Repository made for web development. | index file, css folder, js folder and img folder |
-| `-py` | Python: Repository for python development. | setup file, sample folder with init and core files, and test folder |
-| `-ml` | Minimalist: Only essential files. | .md files and license |
+| `--standard` | Standard: Repository standardization | [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), [Standard README](https://github.com/RichardLitt/standard-readme) and [Standard Version](https://github.com/conventional-changelog/standard-version)  |
+| `--node` | Node: Repository made for coding with node. | npm init -y |
+| `--web`| Web: Repository made for web development. | index file, css folder, js folder and img folder |
+| `--python` | Python: Repository for python development. | setup file, sample folder with init and core files, and test folder |
+| `--minimalist` | Minimalist: Only essential files. | .md files and license |
 
 Also, if you before created a github repository, you can link the local repo to the remote repo in the same command that creates the local repo:
 
