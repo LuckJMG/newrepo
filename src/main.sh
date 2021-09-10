@@ -12,15 +12,19 @@ function newrepo() {
   echo "Creating new repository..."
 
   # Create required folders and files
+  log_info "Creating folders"
   "$LIB_PATH"/folder.sh "$1" "$2"
+  log_info "Importing files"
   "$LIB_PATH"/file.sh "$1" "$2"
 
   # Check if requires node.js (Node and standard options)
   if [ "$1" == "--node" ] || [ "$1" == "--standard" ]; then
+    log_info "Starting node"
     "$LIB_PATH"/node.sh "$1" "$2"
   fi
 
   #* Git initialization always at last
+  log_info "Starting git"
   "$LIB_PATH"/git.sh "$1" "$2" "$3"
 
   echo "New repository created"
