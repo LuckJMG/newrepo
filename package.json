@@ -1,13 +1,13 @@
 {
   "name": "newrepo",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Shell module to create repositories more easily and fast, with configurations for diverse cases.",
   "main": "src/main.sh",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "husky": "^5.0.9",
-    "standard-version": "^9.1.0"
+    "standard-version": "^9.3.1"
   },
   "scripts": {
     "release": "standard-version"
